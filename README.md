@@ -1,4 +1,4 @@
-##  DoS Attack Using Protocol CDP
+##  MitM Using Protocol ARP
 - Este proyecto está basado en una práctica realizada con fines educativos, en la cual realizamos un ataque de Man-in-the-Middle (MitM) mediante ARP Spoofing utilizando un script basado en Scapy en el lenguaje Python.
 
 
