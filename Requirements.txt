@@ -1,0 +1,38 @@
+1. Entorno de Ejecución
+Sistema Operativo:
+Distribución Linux basada en Debian (Kali Linux 2025.x, Parrot OS 5.x, Ubuntu 22.04 LTS o superior).
+Nota: Kali Linux es el estándar de facto para pruebas de penetración y viene con las herramientas preinstaladas.
+
+Arquitectura:
+x86_64 (AMD64) o ARM64 (si se ejecuta en Raspberry Pi o dispositivos similares).
+
+Permisos de Ejecución:
+Todas las herramientas deben ejecutarse con privilegios de root (sudo) para acceso a interfaces de red en modo promiscuo y manipulación de paquetes a nivel de enlace.
+
+2. Requisitos de Hardware
+`CPU:`
+`Procesador compatible con instrucciones SSE2 o superior. Mínimo: Intel Core i3-4xxx / AMD Ryzen 3 1200.`
+`Recomendado: Intel Core i5-8xxx / AMD Ryzen 5 3600 o superior.`
+
+RAM:
+Mínimo: 4 GB DDR4.
+Recomendado: 8 GB DDR4 o superior para manejo de capturas de tráfico pesado y múltiples sesiones.
+
+Almacenamiento:
+Mínimo: 20 GB SSD/HDD (para sistema base + herramientas).
+Recomendado: 50 GB SSD para almacenamiento de capturas .pcap, logs y virtualización.
+
+Interfaz de Red:
+
+Cableada (Ethernet): NIC con soporte para modo promiscuo (todas las NIC modernas lo soportan).
+Inalámbrica (Wi-Fi): Adaptador USB compatible con modo monitor y inyección de paquetes (ej. Atheros AR9271, Ralink RT3070, Realtek RTL8812AU).
+Requiere drivers compatibles con airmon-ng y iwconfig.
+
+`sudo pip3 install --upgrade scapy`
+
+`sudo apt install dsniff`
+
+`sudo apt install wireshark`
+
+sudo usermod -a -G wireshark $USER
+# Reiniciar sesión o ejecutar: newgrp wireshark
